@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- CHOSEN CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.5/chosen.css"> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.5/chosen.jquery.min.js">
+        </script>
+        <title>
+            Pet Finder
+        </title>
+    </head>
+    <body>
+        <section class = "container text-center card mt-5 bg-info">
+            <h1 class = "my-5 display-1">
+                Pet Finder
+            </h1>
+            <h2 class="my-5 lead">
+                Answer a few basic questions to get matched with your most compatabile pet!
+            </h2>
+        </section>
+        <section class = "container text-center card mt-5 mb-3 bg-success">
+            <div class = "card m-5 ">
+                <h2 class = "card-header lead">
+                    Answer some Questions about yourself : 
+                </h2>
+                <div class = "card-body">
+                    <div>
+                        <h4 class = "lead" id="friendName">
+                            First Name
+                            <strong>
+                                (Required)
+                            </strong>
+                        </h4>
+                        <input type="text" id="name" class="form-control w-75 mx-auto" required>
+                    </div>
+                    <div>
+                        <h4 class = "lead" id= "friendPhoto">
+                            Link to a Photo <strong> (Required) </strong>
+                        </h4>
+                        <input type="text" id="photo" class="form-control w-75 mx-auto" required>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class = "container text-center card mt-3 mb-5 py-5 bg-warning">
+            <div class = "card mx-5 mb-5">
+                <div class = "card-header">
+                    <h3 class = "lead">
+                        Question 1
+                    </h3>
+                    <h4 class = " lead">
+                        I prefer hot weather to cold weather.
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q1">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card mx-5">
+                <div class = "card-header">
+                    <h3 class = "lead">
+                        Question 2
+                    </h3>
+                    <h4 class = "lead">
+                        I prefer Morning to Evening.
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q2">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card m-5">
+                <div class = "card-header">
+                    <h3 class = "lead">
+                        Question 3
+                    </h3>
+                    <h4 class = "lead">
+                        I would rather eat a PB&J sandwich than a Club sandwich.
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q3">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card mx-5">
+                <div class = "card-header ">
+                    <h3 class = "lead">
+                        Question 4
+                    </h3>
+                    <h4 class = "lead">
+                        I would rather watch an Action movie over a Comedy.
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q4">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card m-5">
+                <div class = "card-header">
+                    <h3 class = "lead">
+                        Question 5
+                    </h3>
+                    <h4 class = "lead">
+                        I would rather live in the City than the Country.
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-selectquestion" id="q5">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card mx-5">
+                <div class = "card-header">
+                    <h3 class = "lead">
+                        Question 6
+                    </h3>
+                    <h4 class = "lead">
+                        I prefer the beach to the mountains
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q6">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card m-5">
+                <div class = "card-header">
+                    <h3 class = "lead">
+                        Question 7
+                    </h3>
+                    <h4 class = "lead">
+                        It's easy for me to make new friends.
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q7">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card mx-5">
+                <div class = "card-header ">
+                    <h3 class = "lead">
+                        Question 8
+                    </h3>
+                    <h4 class = "lead">
+                        I like to spend time in the water (pool, lake, ocean, bathtub, etc)
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q8">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card m-5">
+                <div class = "card-header ">
+                    <h3 class = "lead">
+                        Question 9
+                    </h3>
+                    <h4 class = "lead">
+                        I consider myself 'high-maintenance.'
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q9">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card mx-5">
+                <div class = "card-header">
+                    <h3 class = "lead">
+                        Question 10
+                    </h3>
+                    <h4 class = "lead">
+                        I am easygoing and I like to go with the flow.
+                    </h4>
+                </div>
+                <div class = "card-body">
+                    <select class="chosen-select question" id="q10">
+                        <option value="blank" ></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "card mx-auto m-5 w-50">
+                <!--Button for submission of answers.-->
+                <button type="submit" class="btn btn-info btn-lg" id="submit">
+                    SUBMIT
+                </button>
+            </div>
+        </section> <!-- END OF QUESTIONS-->
+        <nav class=" navbar navbar-dark sticky-bottom bg-dark">
+            <div class="container">
+                <ul class = "nav lead">
+                    <li class = "nav-item">
+                        <a href="/api/friends" class = "nav-link text-light">
+                            API Friends List
+                        </a>
+                    </li>
+                    <!-- <li class = "nav-item">
+                        <a href="" class = "nav-link text-light">
+                            GitHub Repo
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+        
+        <div id="resultModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                        <h2 class="modal-title">
+                            <strong>
+                                Your Best Match :
+                            </strong>
+                        </h2>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="choiceName"></h2>
+                        <img id="choicePic" src="" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        var config = {
+            ".chosen-select": {},
+            ".chosen-select-deselect": {
+                allow_single_deselect: true
+            },
+            ".chosen-select-no-single": {
+                disable_search_threshold: 10
+            },
+            ".chosen-select-no-results": {
+                no_results_text: "Unable to determine a good match!"
+            },
+        };
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+        $("#submit").on("click",function(event){
+            event.preventDefault();
+            var formControl = function (){
+                var boolean = true;
+                $(".form-control").each(function(){
+                    if ($(this).val() === "blank"){
+                        boolean = false;
+                    }
+                });
+                $(".chosen-select").each(function(){
+                    if ($(this).val()==="blank"){
+                        boolean = false;
+                    }
+                });
+                return boolean;
+            }
+            if (formControl()) {
+                var userData = {
+                    name:$("#name").val(),
+                    photo:$("#photo").val(),
+                    scores:[
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+                
+                $.post("/api/friends",userData,function(data){
+                    $("#choiceName").text(data.name);
+                    $("#choicePic").attr("src", data.photo);
+                    $("#resultModal").modal("toggle");
+                });
+            } else {
+            alert("Make sure to complete the entire survey!");
+            }
+        });
+        </script>
+    </body>
+</html>
