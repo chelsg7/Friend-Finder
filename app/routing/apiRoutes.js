@@ -32,16 +32,16 @@ module.exports=function(app){
       console.log(answerDifferencesArray);
       friends.push(user);
 
-      var getLowest = function (array){
+      var getLow = function (array){
         return array.reduce(function(a,b){
           return Math.min(a,b);
         });
       }
-      var lowestScore=getLowest(answerDifferencesArray);
-      var bestMatch=answerDifferencesArray.indexOf(lowestScore);
+      var lowScore= getLow(answerDifferencesArray);
+      var bestMatch=answerDifferencesArray.indexOf(lowScore);
       
-      console.log("Lowest Score: "+ lowestScore);
-      console.log("Best Match Index: "+bestMatch);
+      // console.log("Lowest Score Difference: "+ lowScore);
+      console.log("Best Match Array Index # : "+bestMatch);
       console.log("The Best Pet Match: "+friends[bestMatch].name);
 
       res.json(friends[bestMatch]);//Returning friends object as JSON.//
